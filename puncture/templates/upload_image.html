@@ -1,0 +1,22 @@
+<!-- puncture_system/templates/upload_image.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'upload_image' %}">Upload Image</a>
+    </div>
+
+    <h1>Upload Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="uploaded_image">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
